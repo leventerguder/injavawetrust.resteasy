@@ -32,7 +32,7 @@
 	</properties>
 
 	<dependencies>
-	
+
 		<dependency>
 			<groupId>org.jboss.resteasy</groupId>
 			<artifactId>resteasy-jaxrs</artifactId>
@@ -44,6 +44,6 @@
 			<artifactId>resteasy-servlet-initializer</artifactId>
 			<version>${resteasy.version}</version>
 		</dependency>
-		
+
 	</dependencies>
 </project>
