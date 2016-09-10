@@ -4,6 +4,6 @@
         <wb-resource deploy-path="/" source-path="/WebContent" tag="defaultRootSource"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src"/>
         <property name="context-root" value="injavawetrust.resteasy.wildfly"/>
-        <property name="java-output-path" value="/injavawetrust.resteasy.wildfly/build/classes"/>
+        <property name="java-output-path" value="/injavawetrust.resteasy.wildfly/target/classes"/>
     </wb-module>
 </project-modules>
