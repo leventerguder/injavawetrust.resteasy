@@ -8,6 +8,7 @@ import javax.ws.rs.Path;
 public class CustomerResource {
 
 	@GET
+	//http://localhost:8080/injavawetrust.resteasy.tutorial/customer-path with HTTP GET
 	public String greeting() {
 
 		String message = "greeting is called.";
@@ -16,7 +17,7 @@ public class CustomerResource {
 	}
 
 	// RESTEasy implementation doesn't throw exception for ambiguous @GET method
-	// , just warning.
+	// You can see WARNING on Output console.
 	@GET
 	public String greeting2() {
 
@@ -26,6 +27,7 @@ public class CustomerResource {
 	}
 
 	@POST
+	//http://localhost:8080/injavawetrust.resteasy.tutorial/customer-path with HTTP POST
 	public String greetingForPOST() {
 
 		String message = "greetingForPOST is called.";
@@ -35,6 +37,7 @@ public class CustomerResource {
 
 	@GET
 	@Path("/customers")
+	//http://localhost:8080/injavawetrust.resteasy.tutorial/customer-path/customers
 	public String getAllCustomers() {
 
 		String message = "getAllCustomers is called.";
@@ -44,6 +47,7 @@ public class CustomerResource {
 
 	@GET
 	@Path("/vip.customers")
+	//http://localhost:8080/injavawetrust.resteasy.tutorial/customer-path/vip.customers
 	public String getVIPCustomers() {
 
 		String message = "getVIPCustomers is called.";
