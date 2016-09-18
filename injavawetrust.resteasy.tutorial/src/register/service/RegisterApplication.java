@@ -7,7 +7,7 @@ import java.util.Set;
 import javax.ws.rs.ApplicationPath;
 import javax.ws.rs.core.Application;
 
-import _01.pathAndPathParam.service.CustomerResource;
+import _01.path.service.CustomerResource;
 
 @ApplicationPath("/")
 public class RegisterApplication extends Application{
