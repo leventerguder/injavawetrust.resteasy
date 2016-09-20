@@ -7,15 +7,15 @@ import java.util.Set;
 import javax.ws.rs.ApplicationPath;
 import javax.ws.rs.core.Application;
 
-import _01.path.service.CustomerResource;
-
 @ApplicationPath("/")
 public class RegisterApplication extends Application{
 
 	   private Set<Object> singletons = new HashSet<Object>();
 	   
 	   public RegisterApplication() {
-	      singletons.add(new CustomerResource());
+	      singletons.add(new _01.path.service.CustomerResource());
+	      singletons.add(new _02.pathParam.service.CustomerResource());
+	      singletons.add(new _02.pathParam.service.OrderResource());
 	   }
 	   
 	   @Override
