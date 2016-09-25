@@ -12,8 +12,8 @@ public class CarResource {
 	@GET
 	@Path("/car")
 	// http://localhost:8080/injavawetrust.resteasy.tutorial/car-matrixParam/car;brand=Mercedes;color=red;color=blue;
-	public String getCarWithMatrixParam(@MatrixParam("brand") String brand, @MatrixParam("color") List<String> color) {
-		String message = "getCarWithMatrixParam is called.<br/>" + "Brand : " + brand + " Color : " + color;
+	public String getCarWithMatrixParam(@MatrixParam("brand") String brand, @MatrixParam("color") List<String> colors) {
+		String message = "getCarWithMatrixParam is called.<br/>" + "Brand : " + brand + " Color : " + colors;
 		return message;
 
 	}
