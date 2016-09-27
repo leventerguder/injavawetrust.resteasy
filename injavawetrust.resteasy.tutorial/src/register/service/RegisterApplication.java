@@ -18,6 +18,7 @@ public class RegisterApplication extends Application {
 		singletons.add(new _04.matrixParam.service.CarResource());
 		singletons.add(new _05.queryParam.service.LibraryResource());
 		singletons.add(new _06.formParam.service.PersonService());
+		singletons.add(new _07.headerParam.service.LoginService());
 	}
 
 	@Override
