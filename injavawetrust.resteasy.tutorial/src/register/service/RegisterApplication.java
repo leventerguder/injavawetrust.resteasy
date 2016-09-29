@@ -2,9 +2,9 @@ package register.service;
 
 import java.util.HashSet;
 import java.util.Set;
-
 import javax.ws.rs.ApplicationPath;
 import javax.ws.rs.core.Application;
+
 
 @ApplicationPath("/")
 public class RegisterApplication extends Application {
@@ -18,7 +18,8 @@ public class RegisterApplication extends Application {
 		singletons.add(new _04.matrixParam.service.CarResource());
 		singletons.add(new _05.queryParam.service.LibraryResource());
 		singletons.add(new _06.formParam.service.PersonService());
-		singletons.add(new _07.headerParam.service.LoginService());
+		singletons.add(new _07.headerParam.service.LoginResource());
+		singletons.add(new _08.cookieParam.service.UserResource());
 	}
 
 	@Override

@@ -7,7 +7,7 @@ import javax.ws.rs.core.Context;
 import javax.ws.rs.core.HttpHeaders;
 
 @Path("/login-headerParam")
-public class LoginService {
+public class LoginResource {
 
 	@GET
 	@Path("/getInfo")
