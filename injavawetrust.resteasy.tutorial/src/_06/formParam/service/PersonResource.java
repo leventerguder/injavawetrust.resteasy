@@ -5,7 +5,7 @@ import javax.ws.rs.POST;
 import javax.ws.rs.Path;
 
 @Path("/person-pathParam")
-public class PersonService {
+public class PersonResource {
 
 	@POST
 	@Path("/addPerson")
