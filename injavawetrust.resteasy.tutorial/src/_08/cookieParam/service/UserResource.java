@@ -14,7 +14,6 @@ public class UserResource {
 	public Response addCookie() {
 		String result = "addCookie is called.";
 		return Response.status(200).entity(result).cookie(new NewCookie("myCookie", "myCookieValue")).build();
-
 	}
 
 	@GET
@@ -22,7 +21,6 @@ public class UserResource {
 	public Response getCookie(@CookieParam("myCookie") String userAgent) {
 		String result = "getCookie is called.";
 		return Response.status(200).entity(result + " " + userAgent).build();
-
 	}
 
 }
