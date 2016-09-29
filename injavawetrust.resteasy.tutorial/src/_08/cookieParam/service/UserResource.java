@@ -30,7 +30,7 @@ public class UserResource {
 
 	@GET
 	@Path("/getCookieWithContext")
-	// http://localhost:8080/injavawetrust.rest.tutorial/user-cookieParam/getCookie
+	// http://localhost:8080/injavawetrust.rest.tutorial/user-cookieParam/getCookieWithContext
 	public Response getCookieWithContext(@Context HttpHeaders headers) {
 
 		String result = "getCookieWithContext is called. <br/>";
