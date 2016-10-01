@@ -25,10 +25,10 @@ public class ProductResource {
 	public String getProductsByBrand(@BeanParam Product product) {
 		return "getProductsByBrand is called. <br/>" + product.toString();
 	}
-
-	// http://localhost:8080/injavawetrust.resteasy.tutorial/product-beanParam/getProductsByCategoryAndBrand/laptop;brand=acer;
+	
 	@GET
 	@Path("/getProductsByCategoryAndBrand/{category}")
+	// http://localhost:8080/injavawetrust.resteasy.tutorial/product-beanParam/getProductsByCategoryAndBrand/laptop;brand=acer;
 	public String getProductsByCategoryAndBrand(@BeanParam Product product) {
 		return "getProductsByCategoryAndBrand is called. <br/>" + product.toString();
 	}
