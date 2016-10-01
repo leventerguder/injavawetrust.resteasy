@@ -21,6 +21,7 @@ public class RegisterApplication extends Application {
 		singletons.add(new _08.cookieParam.service.UserResource());
 		singletons.add(new _09.beanParam.service.ProductResource());
 		singletons.add(new _09.beanParam.service.UserResource());
+		singletons.add(new _10.defaulValue.service.CarResource());
 	}
 
 	@Override
