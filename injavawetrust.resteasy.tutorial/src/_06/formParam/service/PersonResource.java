@@ -25,6 +25,3 @@ public class PersonResource {
 	}
 
 }
-
-// TODO
-// @FORM
