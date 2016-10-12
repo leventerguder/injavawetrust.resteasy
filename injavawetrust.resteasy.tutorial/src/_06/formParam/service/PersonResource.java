@@ -3,6 +3,9 @@ package _06.formParam.service;
 import javax.ws.rs.FormParam;
 import javax.ws.rs.POST;
 import javax.ws.rs.Path;
+import org.jboss.resteasy.annotations.Form;
+
+import _06.formParam.model.Person;
 
 @Path("/person-pathParam")
 public class PersonResource {
@@ -13,4 +16,15 @@ public class PersonResource {
 		String message = "addPerson is called. " + "Welcome , " + name + " " + surname;
 		return message;
 	}
+
+	@POST
+	@Path("/addPersonModel")
+	public String addPersonModel(@Form Person person) {
+		String message = "addPersonModel is called.";
+		return message + " " + person.toString();
+	}
+
 }
+
+// TODO
+// @FORM
