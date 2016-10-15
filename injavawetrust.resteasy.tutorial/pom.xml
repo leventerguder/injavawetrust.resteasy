@@ -45,6 +45,33 @@
 			<version>${resteasy.version}</version>
 		</dependency>
 
+		<!-- JAX-B -->
+		<dependency>
+			<groupId>org.jboss.resteasy</groupId>
+			<artifactId>resteasy-jaxb-provider</artifactId>
+			<version>${resteasy.version}</version>
+		</dependency>
+
+
+		<!-- RESTEasy + Jackson -->
+		
+		<!-- 
+		<dependency>
+			<groupId>org.jboss.resteasy</groupId>
+			<artifactId>resteasy-jackson-provider</artifactId>
+			<version>${resteasy.version}</version>
+		</dependency>
+		 -->
+		 
+		<!-- jettison -->
+		<!-- 
+		<dependency>
+			<groupId>org.jboss.resteasy</groupId>
+			<artifactId>resteasy-jettison-provider</artifactId>
+			<version>${resteasy.version}</version>
+		</dependency>	
+		 -->
+		 
 	</dependencies>
 
 </project>
