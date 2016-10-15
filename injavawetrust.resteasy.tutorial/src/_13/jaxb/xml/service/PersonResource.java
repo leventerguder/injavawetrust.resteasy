@@ -15,6 +15,7 @@ public class PersonResource {
 	@GET
 	@Path("/person")
 	@Produces(MediaType.APPLICATION_XML)
+	//http://localhost:8080/injavawetrust.resteasy.tutorial/person-jaxb-xml/person
 	public Person getPerson() {
 		Person person = new Person();
 		person.setId(1);
@@ -27,6 +28,7 @@ public class PersonResource {
 	@GET
 	@Path("/persons")
 	@Produces(MediaType.APPLICATION_XML)
+	//http://localhost:8080/injavawetrust.resteasy.tutorial/person-jaxb-xml/persons
 	public List<Person> getPersons() {
 		Person person1 = new Person();
 		person1.setId(1);

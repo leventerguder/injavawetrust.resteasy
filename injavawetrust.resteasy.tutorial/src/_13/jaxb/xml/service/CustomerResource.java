@@ -14,6 +14,7 @@ public class CustomerResource {
 	@GET
 	@Path("/customer")
 	@Produces(MediaType.APPLICATION_XML)
+	//http://localhost:8080/injavawetrust.resteasy.tutorial/customer-jaxb-xml/customer
 	public Customer getCustomer() {
 		Customer customer = new Customer();
 		customer.setId(1);
