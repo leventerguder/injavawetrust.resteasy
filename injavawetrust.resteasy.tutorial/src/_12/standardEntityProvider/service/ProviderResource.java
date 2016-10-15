@@ -1,4 +1,4 @@
-package _11.standardEntityProvider.service;
+package _12.standardEntityProvider.service;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -77,7 +77,8 @@ public class ProviderResource {
 	@Produces(MediaType.TEXT_PLAIN)
 	// http://localhost:8080/injavawetrust.resteasy.tutorial/provider/file/abc.txt
 	public File getFile(@PathParam("filepath") String path) {
-		return new File(basePath + path);
+		File file = new File(basePath + path);
+		return file;
 	}
 
 	@GET
