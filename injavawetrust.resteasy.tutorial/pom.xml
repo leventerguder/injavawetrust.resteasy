@@ -62,14 +62,12 @@
 		</dependency>
 		
 		 
-		<!-- RESTEasy + Jettison -->
-		<!-- 
+		<!-- RESTEasy + Jettison -->		
 		<dependency>
 			<groupId>org.jboss.resteasy</groupId>
 			<artifactId>resteasy-jettison-provider</artifactId>
 			<version>${resteasy.version}</version>
-		</dependency>	
-		 -->
+		</dependency>			 
 		 
 	</dependencies>
 
