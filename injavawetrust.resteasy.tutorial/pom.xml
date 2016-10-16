@@ -54,15 +54,15 @@
 
 
 		<!-- RESTEasy + Jackson -->	
-		<!-- https://mvnrepository.com/artifact/org.jboss.resteasy/resteasy-jackson-provider -->
+		<!-- https://mvnrepository.com/artifact/org.jboss.resteasy/resteasy-jackson-provider -->				
 		<dependency>
 			<groupId>org.jboss.resteasy</groupId>
 			<artifactId>resteasy-jackson-provider</artifactId>
 			<version>${resteasy.version}</version>
-		</dependency>
-		
-		 
-		<!-- RESTEasy + Jettison -->		
+		</dependency>		
+		  
+		<!-- RESTEasy + Jettison -->
+		<!-- https://mvnrepository.com/artifact/org.jboss.resteasy/resteasy-jettison-provider -->		
 		<dependency>
 			<groupId>org.jboss.resteasy</groupId>
 			<artifactId>resteasy-jettison-provider</artifactId>

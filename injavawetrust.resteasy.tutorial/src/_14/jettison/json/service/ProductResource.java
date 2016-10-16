@@ -15,14 +15,15 @@ public class ProductResource {
 	@GET
 	@Path("/product")
 	@Produces(MediaType.APPLICATION_JSON)
-	//http://localhost:8080/injavawetrust.resteasy.tutorial/product-jettison-json/product
-	@BadgerFish
+	//@BadgerFish
+	//http://localhost:8080/injavawetrust.resteasy.tutorial/product-jettison-json/product	
 	public Product getProduct() {
 		Product product = new Product();
 		product.setId(1);
 		product.setName("K-360");
 		product.setBrand("Logitech");
 		product.setPrice(99.99);
+		product.setCategory("Keyboard");
 		return product;
 	}
 }
