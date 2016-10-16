@@ -1,22 +1,10 @@
-package _14.jaxb.json.model;
+package _14.json.model;
 
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlRootElement;
-import javax.xml.bind.annotation.XmlAccessType;
-
-@XmlRootElement(name = "customer")
-@XmlAccessorType(XmlAccessType.FIELD)
 public class Customer {
-	@XmlAttribute
-	private int id;
-	@XmlElement(name = "first-name")
-	private String firstName;
-	@XmlElement(name = "last-name")
-	private String lastName;
 
-	@XmlElement
+	private int id;
+	private String firstName;
+	private String lastName;
 	private Address address;
 
 	public int getId() {
@@ -50,7 +38,5 @@ public class Customer {
 	public void setAddress(Address address) {
 		this.address = address;
 	}
-	
-	
 
 }

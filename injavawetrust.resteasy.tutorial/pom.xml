@@ -53,17 +53,16 @@
 		</dependency>
 
 
-		<!-- RESTEasy + Jackson -->
-		
-		<!-- 
+		<!-- RESTEasy + Jackson -->	
+		<!-- https://mvnrepository.com/artifact/org.jboss.resteasy/resteasy-jackson-provider -->
 		<dependency>
 			<groupId>org.jboss.resteasy</groupId>
 			<artifactId>resteasy-jackson-provider</artifactId>
 			<version>${resteasy.version}</version>
 		</dependency>
-		 -->
+		
 		 
-		<!-- jettison -->
+		<!-- RESTEasy + Jettison -->
 		<!-- 
 		<dependency>
 			<groupId>org.jboss.resteasy</groupId>

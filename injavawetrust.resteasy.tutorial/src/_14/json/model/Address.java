@@ -1,21 +1,9 @@
-package _14.jaxb.json.model;
+package _14.json.model;
 
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlRootElement;
-
-@XmlRootElement(name = "address")
-@XmlAccessorType(XmlAccessType.FIELD)
 public class Address {
 
-	@XmlElement
 	private String city;
-
-	@XmlElement
-	private String zip;
-
-	@XmlElement
+	private String zip;	
 	private String country;
 
 	public String getCity() {

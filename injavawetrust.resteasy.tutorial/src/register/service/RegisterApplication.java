@@ -26,8 +26,8 @@ public class RegisterApplication extends Application {
 		singletons.add(new _12.standardEntityProvider.service.ProviderResource());
 		singletons.add(new _13.jaxb.xml.service.PersonResource());
 		singletons.add(new _13.jaxb.xml.service.CustomerResource());
-		
-		//singletons.add(new _14.jaxb.json.service.CustomerResource());
+		singletons.add(new _14.json.service.CustomerResource());
+		singletons.add(new _14.json.service.PersonResource());
 	}
 
 	@Override

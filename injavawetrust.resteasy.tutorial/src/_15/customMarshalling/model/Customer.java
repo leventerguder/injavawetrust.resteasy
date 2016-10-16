@@ -1,4 +1,4 @@
-package _14.customMarshalling.model;
+package _15.customMarshalling.model;
 
 import java.io.Serializable;
 
