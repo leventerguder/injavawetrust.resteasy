@@ -1,4 +1,4 @@
-package _14.json.model;
+package _15.jackson.json.model;
 
 public class Customer {
 

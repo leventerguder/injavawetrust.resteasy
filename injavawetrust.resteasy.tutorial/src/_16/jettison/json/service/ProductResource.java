@@ -1,13 +1,11 @@
-package _14.jettison.json.service;
+package _16.jettison.json.service;
 
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 
-import org.jboss.resteasy.annotations.providers.jaxb.json.BadgerFish;
-
-import _14.jettison.json.model.Product;
+import _16.jettison.json.model.Product;
 
 @Path("/product-jettison-json")
 public class ProductResource {

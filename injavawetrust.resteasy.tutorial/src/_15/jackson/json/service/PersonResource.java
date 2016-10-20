@@ -1,4 +1,4 @@
-package _14.json.service;
+package _15.jackson.json.service;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -7,7 +7,7 @@ import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 
-import _14.json.model.Person;
+import _15.jackson.json.model.Person;
 
 @Path("/person-json")
 public class PersonResource {

@@ -1,11 +1,12 @@
-package _14.json.service;
+package _15.jackson.json.service;
 
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
-import _14.json.model.Address;
-import _14.json.model.Customer;
+
+import _15.jackson.json.model.Address;
+import _15.jackson.json.model.Customer;
 
 @Path("/customer-json")
 public class CustomerResource {
