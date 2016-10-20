@@ -1,12 +1,12 @@
-package _13.jaxb.xml.service;
+package _14.jaxb.xml.service;
 
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 
-import _13.jaxb.xml.model.Address;
-import _13.jaxb.xml.model.Customer;
+import _14.jaxb.xml.model.Address;
+import _14.jaxb.xml.model.Customer;
 
 @Path("/customer-jaxb-xml")
 public class CustomerResource {

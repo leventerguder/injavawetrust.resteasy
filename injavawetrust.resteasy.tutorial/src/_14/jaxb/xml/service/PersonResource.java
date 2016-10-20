@@ -1,4 +1,4 @@
-package _13.jaxb.xml.service;
+package _14.jaxb.xml.service;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -7,7 +7,7 @@ import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 
-import _13.jaxb.xml.model.Person;
+import _14.jaxb.xml.model.Person;
 
 @Path("/person-jaxb-xml")
 public class PersonResource {
