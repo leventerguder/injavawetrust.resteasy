@@ -5,6 +5,8 @@ import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 
+import org.jboss.resteasy.annotations.providers.jaxb.json.BadgerFish;
+
 import _16.jettison.json.model.Product;
 
 @Path("/product-jettison-json")
@@ -13,8 +15,8 @@ public class ProductResource {
 	@GET
 	@Path("/product")
 	@Produces(MediaType.APPLICATION_JSON)
-	//@BadgerFish
-	//http://localhost:8080/injavawetrust.resteasy.tutorial/product-jettison-json/product	
+	@BadgerFish
+	// http://localhost:8080/injavawetrust.resteasy.tutorial/product-jettison-json/product
 	public Product getProduct() {
 		Product product = new Product();
 		product.setId(1);
