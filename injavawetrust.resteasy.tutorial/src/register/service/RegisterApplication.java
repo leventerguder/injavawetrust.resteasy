@@ -31,6 +31,7 @@ public class RegisterApplication extends Application {
 		singletons.add(new _15.jackson.json.service.PersonResource());
 		singletons.add(new _16.jettison.json.service.ProductResource());
 		singletons.add(new _17.simple.response.code.service.HTTPResponseResource());
+		singletons.add(new _18.complex.response.service.PersonResource());
 	}
 
 	@Override
