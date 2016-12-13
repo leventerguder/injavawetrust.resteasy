@@ -32,6 +32,9 @@ public class RegisterApplication extends Application {
 		singletons.add(new _16.jettison.json.service.ProductResource());
 		singletons.add(new _17.simple.response.code.service.HTTPResponseResource());
 		singletons.add(new _18.complex.response.service.PersonResource());
+		singletons.add(new _19.exception.service.CustomerResource());
+		singletons.add(new _20.exception.mapper.service.CustomerResource());
+		singletons.add(new _20.exception.mapper.service.NotFoundExceptionMapper());
 	}
 
 	@Override
