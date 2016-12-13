@@ -12,13 +12,14 @@ public class CustomerResource {
 
 	@GET
 	@Path("/customer/{id}")
+	//http://localhost:8080/injavawetrust.resteasy.tutorial/customer-exception-mapper/customer/1
 	public Customer getCustomer(@PathParam("id") int id) {
 
 		CustomerService service = new CustomerService();
 
 		Customer customer = service.findCustomer(id);
 		if (customer == null) {
-			throw new CustomerNotFoundException("customer nt found!");
+			throw new CustomerNotFoundException("Could not find customer id : " + id);
 		}
 		return customer;
 
