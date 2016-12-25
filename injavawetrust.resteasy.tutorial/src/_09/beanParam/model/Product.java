@@ -12,6 +12,7 @@ public class Product {
 	@MatrixParam("brand")
 	private String brand;
 
+	@MatrixParam("price")
 	private double price;
 
 	@PathParam("category")	
