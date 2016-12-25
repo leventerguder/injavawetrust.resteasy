@@ -22,7 +22,7 @@ public class RegisterApplication extends Application {
 		singletons.add(new _08.cookieParam.service.UserResource());
 		singletons.add(new _09.beanParam.service.ProductResource());
 		singletons.add(new _09.beanParam.service.UserResource());
-		singletons.add(new _10.defaulValue.service.CarResource());
+		singletons.add(new _10.defaultValue.service.CarResource());
 		singletons.add(new _11.encoded.service.EmployeeResource());
 		singletons.add(new _12.context.service.ContextResource());
 		singletons.add(new _13.standardEntityProvider.service.ProviderResource());
