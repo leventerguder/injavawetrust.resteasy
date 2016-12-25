@@ -19,6 +19,7 @@ public class LoginResource {
 
 	@GET
 	@Path("/getInfoWithContexth")
+	// http://localhost:8080/injavawetrust.resteasy.tutorial/login-headerParam/getInfoWithContexth
 	public String getInfoWithContexth(@Context HttpHeaders headers) {
 		String message = " getInfoWithContexth is called";
 
