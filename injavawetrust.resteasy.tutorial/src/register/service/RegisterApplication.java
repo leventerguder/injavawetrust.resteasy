@@ -13,6 +13,7 @@ public class RegisterApplication extends Application {
 	public RegisterApplication() {
 		singletons.add(new _01.path.service.CustomerResource());
 		singletons.add(new _02.pathParam.service.CustomerResource());
+		singletons.add(new _02.pathParam.service.OrderResource());
 		singletons.add(new _03.pathSegment.service.CarResource());
 		singletons.add(new _04.matrixParam.service.CarResource());
 		singletons.add(new _05.queryParam.service.LibraryResource());
