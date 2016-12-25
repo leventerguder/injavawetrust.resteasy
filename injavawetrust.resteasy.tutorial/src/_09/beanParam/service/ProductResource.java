@@ -19,15 +19,9 @@ public class ProductResource {
 	@GET
 	@Path("/getProductsByBrand/{category}")
 	// http://localhost:8080/injavawetrust.resteasy.tutorial/product-beanParam/getProductsByBrand/computer;brand=acer
+	// http://localhost:8080/injavawetrust.resteasy.tutorial/product-beanParam/getProductsByBrand/computer;brand=acer;price=123.45
 	public String getProductsByBrand(@BeanParam Product product) {
 		return "getProductsByBrand is called. <br/>" + product.toString();
-	}
-
-	@GET
-	@Path("/getProductsByCategoryAndBrand/{category}")
-	// http://localhost:8080/injavawetrust.resteasy.tutorial/product-beanParam/getProductsByCategoryAndBrand/laptop;brand=acer;price=123.45;
-	public String getProductsByCategoryAndBrand(@BeanParam Product product) {
-		return "getProductsByCategoryAndBrand is called. <br/>" + product.toString();
 	}
 
 }
