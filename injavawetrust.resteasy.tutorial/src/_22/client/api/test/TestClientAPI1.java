@@ -9,13 +9,13 @@ public class TestClientAPI1 {
 
 	public static void main(String[] args) {
 
-		String url = "http://localhost:8080/injavawetrust.resteasy.tutorial/message-client-api/message";
+		String uri = "http://localhost:8080/injavawetrust.resteasy.tutorial/message-client-api/message";
 		Client client = ClientBuilder.newClient();
-		WebTarget target = client.target(url);
+		WebTarget target = client.target(uri);
 
 		Invocation.Builder builder = target.request();
-		String response = builder.get(String.class);
-		System.out.println(response);
+		String message = builder.get(String.class);
+		System.out.println(message);
 
 		client.close();
 	}

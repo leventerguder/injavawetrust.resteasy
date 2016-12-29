@@ -6,17 +6,23 @@ import javax.ws.rs.client.ClientBuilder;
 import javax.ws.rs.client.Invocation;
 import javax.ws.rs.client.WebTarget;
 import javax.ws.rs.core.GenericType;
+import javax.ws.rs.core.Response;
 
 public class TestClientAPI2 {
 
 	public static void main(String[] args) {
 
-		String url = "http://localhost:8080/injavawetrust.resteasy.tutorial/message-client-api/messages";
+		String uri = "http://localhost:8080/injavawetrust.resteasy.tutorial/message-client-api/messages";
 		Client client = ClientBuilder.newClient();
-		WebTarget target = client.target(url);
+		WebTarget target = client.target(uri);
 
 		Invocation.Builder builder = target.request();
 
+		// way-1
+		Response response = builder.get();
+		System.out.println(response.readEntity(List.class));
+
+		// way-2
 		List<String> resultList = builder.get(new GenericType<List<String>>() {});
 
 		System.out.println(resultList);
