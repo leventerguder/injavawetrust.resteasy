@@ -37,6 +37,8 @@ public class RegisterApplication extends Application {
 		singletons.add(new _20.exception.mapper.service.CustomerResource());
 		singletons.add(new _20.exception.mapper.service.NotFoundExceptionMapper());
 		singletons.add(new _21.exception.hierarchy.service.CustomerResource());
+		singletons.add(new _22.client.api.service.MessageResource());
+		singletons.add(new _22.client.api.service.LibraryResource());
 	}
 
 	@Override
