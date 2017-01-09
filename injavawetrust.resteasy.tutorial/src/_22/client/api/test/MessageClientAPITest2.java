@@ -8,7 +8,7 @@ import javax.ws.rs.client.WebTarget;
 import javax.ws.rs.core.GenericType;
 import javax.ws.rs.core.Response;
 
-public class TestClientAPI2 {
+public class MessageClientAPITest2 {
 
 	public static void main(String[] args) {
 

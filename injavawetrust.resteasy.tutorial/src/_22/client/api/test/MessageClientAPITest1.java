@@ -5,7 +5,7 @@ import javax.ws.rs.client.ClientBuilder;
 import javax.ws.rs.client.Invocation;
 import javax.ws.rs.client.WebTarget;
 
-public class TestClientAPI1 {
+public class MessageClientAPITest1 {
 
 	public static void main(String[] args) {
 

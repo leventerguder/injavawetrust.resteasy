@@ -2,7 +2,7 @@ package _22.client.api.model;
 
 public class Book {
 
-	private String ISBN;
+	private String isbn;
 	private String name;
 	private int page;
 	private double price;
@@ -11,20 +11,20 @@ public class Book {
 		super();
 	}
 
-	public Book(String ISBN, String name, int page, double price) {
+	public Book(String isbn, String name, int page, double price) {
 		super();
-		this.ISBN = ISBN;
+		this.isbn = isbn;
 		this.name = name;
 		this.page = page;
 		this.price = price;
 	}
 
-	public String getISBN() {
-		return ISBN;
+	public String getIsbn() {
+		return isbn;
 	}
 
-	public void setISBN(String ISBN) {
-		this.ISBN = ISBN;
+	public void setIsbn(String isbn) {
+		this.isbn = isbn;
 	}
 
 	public String getName() {
@@ -53,7 +53,7 @@ public class Book {
 
 	@Override
 	public String toString() {
-		return "Book [ISBN=" + ISBN + ", name=" + name + ", page=" + page + ", price=" + price + "]";
+		return "Book [isbn=" + isbn + ", name=" + name + ", page=" + page + ", price=" + price + "]";
 	}
 
 }

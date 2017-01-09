@@ -10,18 +10,18 @@ import javax.ws.rs.core.MediaType;
 
 @Path("/message-client-api")
 public class MessageResource {
-
+	
 	@Path("/message")
 	@GET
 	public String getMessage() {
-		String message = "MessageResource#getMessage is called";
+		String message = "Hello JAX-RS Client API!";
 		return message;
 	}
 
 	@Path("/messages")
 	@GET
 	@Produces(MediaType.APPLICATION_JSON)
-	public List<String> workshops() {
+	public List<String> getMessages() {
 		return Arrays.asList("Message-1", "Message-2", "Message-3");
 	}
 }
