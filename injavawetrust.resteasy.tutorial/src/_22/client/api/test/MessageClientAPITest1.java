@@ -10,6 +10,7 @@ public class MessageClientAPITest1 {
 	public static void main(String[] args) {
 
 		String uri = "http://localhost:8080/injavawetrust.resteasy.tutorial/message-client-api/message";
+		
 		Client client = ClientBuilder.newClient();
 		WebTarget target = client.target(uri);
 

@@ -15,12 +15,22 @@ public class LibraryClientAPITest1 {
 		Client client = ClientBuilder.newClient();
 		WebTarget target = client.target(uri);
 		Invocation.Builder invocationBuilder = target.request();
-		Response response = invocationBuilder.get();
 
+		// way1
+		Response response = invocationBuilder.get();
 		String message = response.readEntity(String.class);
 
+		System.out.println("### way1 ###");
 		System.out.println("Response Status:" + response.getStatus());
 		System.out.println(message);
+		System.out.println();
+
+		// way2
+		String message2 = invocationBuilder.get(String.class);
+
+		System.out.println("### way2 ###");
+		System.out.println("Response Status:" + response.getStatus());
+		System.out.println(message2);
 
 		client.close();
 	}

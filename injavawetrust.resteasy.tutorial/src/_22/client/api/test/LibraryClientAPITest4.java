@@ -15,15 +15,25 @@ public class LibraryClientAPITest4 {
 
 	public static void main(String[] args) {
 
-		String url = "http://localhost:8080/injavawetrust.resteasy.tutorial/library-client-api/authors";
+		String uri = "http://localhost:8080/injavawetrust.resteasy.tutorial/library-client-api/authors";
+		
 		Client client = ClientBuilder.newClient();
-		WebTarget target = client.target(url);
+		WebTarget target = client.target(uri);
 		Invocation.Builder invocationBuilder = target.request();
-		Response responseList = invocationBuilder.get();
-		List<Author> employeeList = responseList.readEntity(new GenericType<List<Author>>(){});
-		Response responseXML = invocationBuilder.get();
-		System.out.println(employeeList);
-		System.out.println(responseXML.readEntity(String.class));
+
+		// way1
+		Response response = invocationBuilder.get();
+		List<Author> authorList = response.readEntity(new GenericType<List<Author>>() {});
+
+		// way2
+		Response response2 = invocationBuilder.get();
+		String xmlResponseString = response2.readEntity(String.class);
+
+		System.out.println("### way1 ###");
+		System.out.println(authorList);
+
+		System.out.println("### way2 ###");
+		System.out.println(xmlResponseString);
 
 		client.close();
 	}
