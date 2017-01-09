@@ -13,7 +13,7 @@ public class MessageClientAPITest2 {
 	public static void main(String[] args) {
 
 		String uri = "http://localhost:8080/injavawetrust.resteasy.tutorial/message-client-api/messages";
-		
+
 		Client client = ClientBuilder.newClient();
 		WebTarget target = client.target(uri);
 
@@ -21,12 +21,18 @@ public class MessageClientAPITest2 {
 
 		// way-1
 		Response response = builder.get();
-		System.out.println(response.readEntity(List.class));
+		
+		@SuppressWarnings("unchecked")
+		List<String> resultList1 = response.readEntity(List.class);
 
 		// way-2
-		List<String> resultList = builder.get(new GenericType<List<String>>() {});
+		List<String> resultList2 = builder.get(new GenericType<List<String>>() {});
 
-		System.out.println(resultList);
+		System.out.println("### way1 ###");
+		System.out.println(resultList1);
+		
+		System.out.println("### way2 ###");
+		System.out.println(resultList2);
 
 		client.close();
 	}
