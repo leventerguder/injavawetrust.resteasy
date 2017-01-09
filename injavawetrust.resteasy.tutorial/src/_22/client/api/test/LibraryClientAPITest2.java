@@ -13,11 +13,10 @@ public class LibraryClientAPITest2 {
 
 	public static void main(String[] args) {
 
-
-		String url = "http://localhost:8080/injavawetrust.resteasy.tutorial/library-client-api/book/100";
+		String uri = "http://localhost:8080/injavawetrust.resteasy.tutorial/library-client-api/book/100";
 
 		Client client = ClientBuilder.newClient();
-		WebTarget target = client.target(url);
+		WebTarget target = client.target(uri);
 		Invocation.Builder invocationBuilder = target.request();
 		Response response = invocationBuilder.get();
 
