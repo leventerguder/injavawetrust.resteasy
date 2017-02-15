@@ -5,6 +5,7 @@ import java.util.List;
 import javax.ws.rs.Consumes;
 import javax.ws.rs.POST;
 import javax.ws.rs.Path;
+import javax.ws.rs.core.Form;
 import javax.ws.rs.core.MediaType;
 
 import _23.client.api.post.model.Employee;
@@ -28,5 +29,14 @@ public class EmployeeResource {
 		System.out.println("EmployeeResource#addEmployeeBatch");
 		System.out.println(employees);
 		return "addEmployeeBatch#succeed";
+	}
+	
+	@Path("/addEmployeeForm")
+	@POST
+	@Consumes(MediaType.APPLICATION_FORM_URLENCODED)
+	public String addEmployeeForm(Form form) {
+		System.out.println("EmployeeResource#addEmployeeForm");
+		System.out.println(form.asMap());
+		return "addEmployeeForm#succeed";
 	}
 }

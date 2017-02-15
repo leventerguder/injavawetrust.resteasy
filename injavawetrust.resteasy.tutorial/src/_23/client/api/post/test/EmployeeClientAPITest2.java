@@ -1,36 +1,25 @@
 package _23.client.api.post.test;
 
-import java.util.Arrays;
-import java.util.List;
-
 import javax.ws.rs.client.Client;
 import javax.ws.rs.client.ClientBuilder;
 import javax.ws.rs.client.Entity;
-import javax.ws.rs.client.Invocation;
 import javax.ws.rs.client.WebTarget;
+import javax.ws.rs.core.Form;
 import javax.ws.rs.core.Response;
-
-import _23.client.api.post.model.Employee;
 
 public class EmployeeClientAPITest2 {
 
 	public static void main(String[] args) {
-		String uri = "http://localhost:8080/injavawetrust.resteasy.tutorial/employee-client-api/addEmployeeBatch";
+		String uri = "http://localhost:8080/injavawetrust.resteasy.tutorial/employee-client-api/addEmployeeForm";
 
 		Client client = ClientBuilder.newClient();
 		WebTarget target = client.target(uri);
 
-		List<Employee> employees = Arrays.asList(new Employee(1, "Levent", "Erguder"),
-				new Employee(2, "James", "Gosling"));
+		Form form = new Form().param("id", "1").param("name", "Levent").param("surname", "Erguder");
 
-		Entity<List<Employee>> jsonEntity = Entity.json(employees);
-
-		Invocation.Builder builder = target.request();
-		Response message = builder.post(jsonEntity);
-
-		System.out.println(message.getStatus());
-		System.out.println(message.readEntity(String.class));
-
+		Response response = target.request().post(Entity.form(form));
+		System.out.println(response.getStatus());
+		System.out.println(response.readEntity(String.class));
 		client.close();
 	}
 }
