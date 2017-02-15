@@ -1,4 +1,4 @@
-package _23.client.api.model;
+package _23.client.api.post.model;
 
 public class Employee {
 

@@ -39,8 +39,8 @@ public class RegisterApplication extends Application {
 		singletons.add(new _21.exception.hierarchy.service.CustomerResource());
 		singletons.add(new _22.client.api.service.MessageResource());
 		singletons.add(new _22.client.api.service.LibraryResource());
-		singletons.add(new _23.client.api.service.EmployeeResource());
-		singletons.add(new _23.client.api.service.ProjectResource());
+		singletons.add(new _23.client.api.post.service.EmployeeResource());
+		singletons.add(new _23.client.api.post.service.ProjectResource());
 	}
 
 	@Override

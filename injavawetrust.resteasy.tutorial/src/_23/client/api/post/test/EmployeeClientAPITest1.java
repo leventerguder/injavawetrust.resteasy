@@ -1,16 +1,15 @@
-package _23.client.api.test;
+package _23.client.api.post.test;
 
 import javax.ws.rs.client.Client;
 import javax.ws.rs.client.ClientBuilder;
 import javax.ws.rs.client.Entity;
 import javax.ws.rs.client.Invocation;
 import javax.ws.rs.client.WebTarget;
-import javax.ws.rs.core.Form;
 import javax.ws.rs.core.Response;
 
-import _23.client.api.model.Employee;
+import _23.client.api.post.model.Employee;
 
-public class EmployeeClientApiTest2 {
+public class EmployeeClientAPITest1 {
 
 	public static void main(String[] args) {
 		String uri = "http://localhost:8080/injavawetrust.resteasy.tutorial/employee-client-api/addEmployee";
@@ -20,14 +19,16 @@ public class EmployeeClientApiTest2 {
 
 		Entity<Employee> jsonEntity = Entity.json(new Employee(1, "Levent", "Erguder"));
 
-		Form form = new Form().param("id", "1").param("name", "Levent").param("surname", "Erguder");
+		// valid too
+		// Entity<Employee> jsonEntity = Entity.entity(new Employee(1, "Levent",
+		// "Erguder"),MediaType.APPLICATION_JSON);
 
-		Response response = target.request().post(Entity.form(form));
-		System.out.println(response);
+		Invocation.Builder builder = target.request();
+		Response message = builder.post(jsonEntity);
 
-		//Employee order = response.readEntity(Employee.class);
+		System.out.println(message.getStatus());
+		System.out.println(message.readEntity(String.class));
 
-		//System.out.println(order);
 		client.close();
 	}
 }

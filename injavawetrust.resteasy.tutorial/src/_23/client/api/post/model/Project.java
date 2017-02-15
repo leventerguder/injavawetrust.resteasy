@@ -1,4 +1,4 @@
-package _23.client.api.model;
+package _23.client.api.post.model;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
