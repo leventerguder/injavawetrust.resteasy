@@ -1,4 +1,4 @@
-package _23.client.api.post.test;
+package _23.client.api.post.json.test;
 
 import javax.ws.rs.client.Client;
 import javax.ws.rs.client.ClientBuilder;
@@ -7,7 +7,7 @@ import javax.ws.rs.client.Invocation;
 import javax.ws.rs.client.WebTarget;
 import javax.ws.rs.core.Response;
 
-import _23.client.api.post.model.Employee;
+import _23.client.api.post.json.model.Employee;
 
 public class EmployeeClientAPITest1 {
 
@@ -26,8 +26,8 @@ public class EmployeeClientAPITest1 {
 		Invocation.Builder builder = target.request();
 		Response message = builder.post(jsonEntity);
 
-		System.out.println(message.getStatus());
-		System.out.println(message.readEntity(String.class));
+		System.out.println("status : " + message.getStatus());
+		System.out.println("readEntity: " + message.readEntity(String.class));
 
 		client.close();
 	}

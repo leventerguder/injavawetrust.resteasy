@@ -1,4 +1,4 @@
-package _23.client.api.post.model;
+package _24.client.api.post.xml.model;
 
 import java.util.List;
 

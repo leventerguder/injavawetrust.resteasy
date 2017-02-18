@@ -1,12 +1,12 @@
-package _23.client.api.post.service;
+package _24.client.api.post.xml.service;
 
 import javax.ws.rs.Consumes;
 import javax.ws.rs.POST;
 import javax.ws.rs.Path;
 import javax.ws.rs.core.MediaType;
 
-import _23.client.api.post.model.Project;
-import _23.client.api.post.model.ProjectList;
+import _24.client.api.post.xml.model.Project;
+import _24.client.api.post.xml.model.ProjectList;
 
 @Path("/project-client-api")
 public class ProjectResource {

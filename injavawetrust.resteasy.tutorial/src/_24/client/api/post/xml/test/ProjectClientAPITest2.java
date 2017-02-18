@@ -1,4 +1,4 @@
-package _23.client.api.post.test;
+package _24.client.api.post.xml.test;
 
 import java.util.Arrays;
 import java.util.List;
@@ -10,10 +10,10 @@ import javax.ws.rs.client.Invocation;
 import javax.ws.rs.client.WebTarget;
 import javax.ws.rs.core.Response;
 
-import _23.client.api.post.model.Project;
-import _23.client.api.post.model.ProjectList;
+import _24.client.api.post.xml.model.Project;
+import _24.client.api.post.xml.model.ProjectList;
 
-public class ProjectClientApiTest2 {
+public class ProjectClientAPITest2 {
 
 	public static void main(String[] args) {
 		String uri = "http://localhost:8080/injavawetrust.resteasy.tutorial/project-client-api/addProjectBatch";
@@ -21,7 +21,8 @@ public class ProjectClientApiTest2 {
 		Client client = ClientBuilder.newClient();
 		WebTarget target = client.target(uri);
 
-		List<Project> projects = Arrays.asList(new Project(1, "IT", "Payment Project"),
+		List<Project> projects = Arrays.asList(
+				new Project(1, "IT", "Payment Project"),
 				new Project(2, "IT", "Security Project"));
 
 		ProjectList projectList = new ProjectList(projects);
@@ -30,8 +31,10 @@ public class ProjectClientApiTest2 {
 
 		Invocation.Builder builder = target.request();
 		Response message = builder.post(xmlEntity);
-		System.out.println(message);
 
+		System.out.println("status : " + message.getStatus());
+		System.out.println("readEntity: " + message.readEntity(String.class));
+	
 		client.close();
 	}
 }
