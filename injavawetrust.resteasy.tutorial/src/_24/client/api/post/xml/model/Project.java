@@ -16,6 +16,18 @@ public class Project {
 	@XmlElement
 	private String department;
 
+	// default constructor is required.
+	public Project() {
+		super();
+	}
+
+	public Project(int id, String name, String department) {
+		super();
+		this.id = id;
+		this.name = name;
+		this.department = department;
+	}
+
 	public int getId() {
 		return id;
 	}
@@ -43,18 +55,6 @@ public class Project {
 	@Override
 	public String toString() {
 		return "Project [id=" + id + ", name=" + name + ", department=" + department + "]";
-	}
-
-	public Project(int id, String name, String department) {
-		super();
-		this.id = id;
-		this.name = name;
-		this.department = department;
-	}
-
-	// default constructor is required.
-	public Project() {
-		super();
 	}
 
 }

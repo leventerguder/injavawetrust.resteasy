@@ -24,8 +24,8 @@ public class ProjectResource {
 	@POST
 	@Consumes(MediaType.APPLICATION_XML)
 	public String addProjectBatch(ProjectList projectList) {
-		System.out.println("ProjectResource#addProject");
+		System.out.println("ProjectResource#addProjectBatch");
 		System.out.println(projectList);
-		return "addProject#succeed";
+		return "addProjectBatch#succeed";
 	}
 }
