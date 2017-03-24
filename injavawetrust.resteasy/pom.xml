@@ -27,7 +27,7 @@
   </build>
   
   <properties>
-  	<resteasy.version>3.0.19.Final</resteasy.version>
+  	<resteasy.version>3.1.1.Final</resteasy.version>
   </properties>
   
   <dependencies>
