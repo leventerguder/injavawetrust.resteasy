@@ -21,7 +21,7 @@ public class CustomerResource {
 	@GET
 	public String greeting2() {
 
-		String message = "greeting is called.";
+		String message = "greeting2 is called.";
 		return message;
 
 	}
