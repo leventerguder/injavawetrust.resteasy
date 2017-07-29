@@ -12,6 +12,8 @@ public class RegisterApplication extends Application {
 
 	public RegisterApplication() {
 		singletons.add(new _01.path.service.CustomerResource());
+		singletons.add(new _01.path.service.subresource.ShoppingStoreResource());
+		singletons.add(new _01.path.service.subresource.ProductResource());
 		singletons.add(new _02.pathParam.service.CustomerResource());
 		singletons.add(new _02.pathParam.service.OrderResource());
 		singletons.add(new _03.pathSegment.service.CarResource());
