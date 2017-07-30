@@ -9,6 +9,9 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
+
+import org.jboss.resteasy.annotations.providers.jaxb.Wrapped;
+
 import _14.jaxb.xml.model.Person;
 
 @Path("/person-jaxb-xml")
@@ -48,6 +51,7 @@ public class PersonResource {
 	@GET
 	@Path("/persons")
 	@Produces(MediaType.APPLICATION_XML)
+	@Wrapped(element="list", namespace="http://foo.org", prefix="foo")
 	// http://localhost:8080/injavawetrust.resteasy.tutorial/person-jaxb-xml/persons
 	public List<Person> getPersons() {
 		Person person1 = new Person();
