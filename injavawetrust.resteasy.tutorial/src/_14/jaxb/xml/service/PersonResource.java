@@ -2,7 +2,10 @@ package _14.jaxb.xml.service;
 
 import java.io.StringWriter;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
+
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
@@ -11,6 +14,7 @@ import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
 
 import org.jboss.resteasy.annotations.providers.jaxb.Wrapped;
+import org.jboss.resteasy.annotations.providers.jaxb.WrappedMap;
 
 import _14.jaxb.xml.model.Person;
 
@@ -51,7 +55,7 @@ public class PersonResource {
 	@GET
 	@Path("/persons")
 	@Produces(MediaType.APPLICATION_XML)
-	@Wrapped(element="list", namespace="http://foo.org", prefix="foo")
+	@Wrapped(element = "list", namespace = "http://foo.org", prefix = "foo")
 	// http://localhost:8080/injavawetrust.resteasy.tutorial/person-jaxb-xml/persons
 	public List<Person> getPersons() {
 		Person person1 = new Person();
@@ -100,5 +104,34 @@ public class PersonResource {
 		Person[] persons = new Person[] { person1, person2, person3 };
 
 		return persons;
+	}
+
+	@GET
+	@Path("/personsMap")
+	@Produces(MediaType.APPLICATION_XML)
+	@WrappedMap(map = "hashmap", entry = "hashentry", key = "hashkey")
+	// http://localhost:8080/injavawetrust.resteasy.tutorial/person-jaxb-xml/personsMap
+	public Map<String, Person> getPersonsMap() {
+		Person person1 = new Person();
+		person1.setId(1);
+		person1.setName("Levent");
+		person1.setSurname("Erguder");
+
+		Person person2 = new Person();
+		person2.setId(2);
+		person2.setName("Joshua");
+		person2.setSurname("Bloch");
+
+		Person person3 = new Person();
+		person3.setId(3);
+		person3.setName("James");
+		person3.setSurname("Gosling");
+
+		Map<String, Person> personMap = new HashMap<>();
+		personMap.put("key1", person1);
+		personMap.put("key2", person2);
+		personMap.put("key3", person3);
+
+		return personMap;
 	}
 }
