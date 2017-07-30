@@ -1,12 +1,14 @@
 package _14.jaxb.xml.service;
 
+import java.io.StringWriter;
 import java.util.ArrayList;
 import java.util.List;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
-
+import javax.xml.bind.JAXBContext;
+import javax.xml.bind.JAXBException;
 import _14.jaxb.xml.model.Person;
 
 @Path("/person-jaxb-xml")
@@ -15,7 +17,7 @@ public class PersonResource {
 	@GET
 	@Path("/person")
 	@Produces(MediaType.APPLICATION_XML)
-	//http://localhost:8080/injavawetrust.resteasy.tutorial/person-jaxb-xml/person
+	// http://localhost:8080/injavawetrust.resteasy.tutorial/person-jaxb-xml/person
 	public Person getPerson() {
 		Person person = new Person();
 		person.setId(1);
@@ -26,9 +28,27 @@ public class PersonResource {
 	}
 
 	@GET
+	@Path("/personWithJAXBContext")
+	@Produces(MediaType.APPLICATION_XML)
+	// http://localhost:8080/injavawetrust.resteasy.tutorial/person-jaxb-xml/personWithJAXBContext
+	public String getPersonWithJAXBContext() throws JAXBException {
+
+		Person person = new Person();
+		person.setId(1);
+		person.setName("Levent");
+		person.setSurname("Erguder");
+
+		JAXBContext ctx = JAXBContext.newInstance(Person.class);
+		StringWriter writer = new StringWriter();
+		ctx.createMarshaller().marshal(person, writer);
+
+		return writer.toString();
+	}
+
+	@GET
 	@Path("/persons")
 	@Produces(MediaType.APPLICATION_XML)
-	//http://localhost:8080/injavawetrust.resteasy.tutorial/person-jaxb-xml/persons
+	// http://localhost:8080/injavawetrust.resteasy.tutorial/person-jaxb-xml/persons
 	public List<Person> getPersons() {
 		Person person1 = new Person();
 		person1.setId(1);
@@ -52,7 +72,7 @@ public class PersonResource {
 
 		return persons;
 	}
-	
+
 	@GET
 	@Path("/personsArray")
 	@Produces(MediaType.APPLICATION_XML)
