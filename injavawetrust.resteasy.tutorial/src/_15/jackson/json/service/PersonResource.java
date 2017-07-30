@@ -15,7 +15,7 @@ public class PersonResource {
 	@GET
 	@Path("/person")
 	@Produces(MediaType.APPLICATION_JSON)
-	//http://localhost:8080/injavawetrust.resteasy.tutorial/person-json/person
+	// http://localhost:8080/injavawetrust.resteasy.tutorial/person-json/person
 	public Person getPerson() {
 		Person person = new Person();
 		person.setId(1);
@@ -28,7 +28,7 @@ public class PersonResource {
 	@GET
 	@Path("/persons")
 	@Produces(MediaType.APPLICATION_JSON)
-	//http://localhost:8080/injavawetrust.resteasy.tutorial/person-json/persons
+	// http://localhost:8080/injavawetrust.resteasy.tutorial/person-json/persons
 	public List<Person> getPersons() {
 		Person person1 = new Person();
 		person1.setId(1);

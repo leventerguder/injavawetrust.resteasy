@@ -14,7 +14,7 @@ public class CustomerResource {
 	@GET
 	@Path("/customer")
 	@Produces(MediaType.APPLICATION_JSON)
-	//http://localhost:8080/injavawetrust.jersey.tutorial/customer-json/customer
+	// http://localhost:8080/injavawetrust.resteasy.tutorial/customer-json/customer
 	public Customer getCustomer() {
 		Customer customer = new Customer();
 		customer.setId(1);
