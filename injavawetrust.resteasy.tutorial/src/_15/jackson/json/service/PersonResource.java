@@ -52,4 +52,29 @@ public class PersonResource {
 
 		return persons;
 	}
+	
+	@GET
+	@Path("/personsArray")
+	@Produces(MediaType.APPLICATION_JSON)
+	// http://localhost:8080/injavawetrust.resteasy.tutorial/person-json/personsArray
+	public Person[] getPersonsArray() {
+		Person person1 = new Person();
+		person1.setId(1);
+		person1.setName("Levent");
+		person1.setSurname("Erguder");
+
+		Person person2 = new Person();
+		person2.setId(2);
+		person2.setName("Joshua");
+		person2.setSurname("Bloch");
+
+		Person person3 = new Person();
+		person3.setId(3);
+		person3.setName("James");
+		person3.setSurname("Gosling");
+
+		Person[] persons = new Person[] { person1, person2, person3 };
+
+		return persons;
+	}
 }
