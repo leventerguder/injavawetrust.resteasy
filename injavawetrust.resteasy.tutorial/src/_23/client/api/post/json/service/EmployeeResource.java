@@ -12,8 +12,8 @@ import _23.client.api.post.json.model.Employee;
 @Path("/employee-client-api")
 public class EmployeeResource {
 
-	@Path("/addEmployee")
 	@POST
+	@Path("/addEmployee")
 	@Consumes(MediaType.APPLICATION_JSON)
 	public String addEmployee(Employee employee) {
 		System.out.println("EmployeeResource#addEmployee");
@@ -21,8 +21,8 @@ public class EmployeeResource {
 		return "addEmployee#succeed";
 	}
 
-	@Path("/addEmployeeBatch")
 	@POST
+	@Path("/addEmployeeBatch")
 	@Consumes(MediaType.APPLICATION_JSON)
 	public String addEmployeeBatch(List<Employee> employees) {
 		System.out.println("EmployeeResource#addEmployeeBatch");
