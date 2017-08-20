@@ -24,7 +24,7 @@ public class CustomerResource {
 
 		Customer customer = service.findCustomer(id);
 		if (customer == null) {
-			throw new NotFoundException();
+			throw new NotFoundException("Customer not found!");
 		}
 		return customer;
 
