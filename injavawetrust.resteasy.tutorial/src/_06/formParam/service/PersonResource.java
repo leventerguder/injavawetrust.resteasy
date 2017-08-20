@@ -7,7 +7,7 @@ import org.jboss.resteasy.annotations.Form;
 
 import _06.formParam.model.Person;
 
-@Path("/person-pathParam")
+@Path("/person-formParam")
 public class PersonResource {
 
 	@POST
