@@ -12,7 +12,7 @@ public class CustomerResource {
 
 	@GET
 	@Path("/customer/{id}")
-	//http://localhost:8080/injavawetrust.resteasy.tutorial/customer-exception-mapper/customer/1
+	// http://localhost:8080/injavawetrust.resteasy.tutorial/customer-exception-mapper/customer/1
 	public Customer getCustomer(@PathParam("id") int id) {
 
 		CustomerService service = new CustomerService();
