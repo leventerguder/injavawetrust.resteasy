@@ -13,8 +13,8 @@ public class MessageClientAPITest1 {
 		
 		Client client = ClientBuilder.newClient();
 		WebTarget target = client.target(uri);
-
 		Invocation.Builder builder = target.request();
+		
 		String message = builder.get(String.class);
 		System.out.println(message);
 

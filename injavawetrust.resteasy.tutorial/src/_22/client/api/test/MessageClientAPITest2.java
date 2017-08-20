@@ -30,7 +30,7 @@ public class MessageClientAPITest2 {
 
 		System.out.println("### way1 ###");
 		System.out.println(resultList1);
-		
+
 		System.out.println("### way2 ###");
 		System.out.println(resultList2);
 
