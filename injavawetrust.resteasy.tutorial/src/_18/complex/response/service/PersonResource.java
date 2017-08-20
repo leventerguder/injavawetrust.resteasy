@@ -5,6 +5,7 @@ import java.util.List;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
+import javax.ws.rs.core.GenericEntity;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.NewCookie;
 import javax.ws.rs.core.Response;
@@ -51,7 +52,9 @@ public class PersonResource {
 
 		List<Person> persons = Arrays.asList(person1, person2, person3);
 
-		//GenericEntity<List<Person>> genericEntity = new GenericEntity<List<Person>>(persons) {};
+		// GenericEntity<List<Person>> genericEntity = new GenericEntity<List<Person>>(persons) {};
+		// return Response.ok(genericEntity).build();
+		
 		return Response.ok(persons).build();
 	}
 }
