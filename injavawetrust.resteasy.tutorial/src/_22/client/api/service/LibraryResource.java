@@ -20,6 +20,7 @@ public class LibraryResource {
 	@GET
 	@Path("/welcome")
 	@Produces(MediaType.TEXT_PLAIN)
+	// http://localhost:8080/injavawetrust.resteasy.tutorial/library-client-api/welcome
 	public Response welcome() {
 		String message = "Welcome Library!";
 		ResponseBuilder builder = Response.ok(message);
@@ -40,7 +41,7 @@ public class LibraryResource {
 	@GET
 	@Path("/author")
 	@Produces(MediaType.APPLICATION_XML)
-	//// http://localhost:8080/injavawetrust.resteasy.tutorial/library-client-api/author
+	// http://localhost:8080/injavawetrust.resteasy.tutorial/library-client-api/author
 	public Response getAuthor() {
 		Author author = new Author("1", "Fernando", "Pessoa", "Portugal");
 		ResponseBuilder builder = Response.ok(author);
@@ -50,7 +51,7 @@ public class LibraryResource {
 	@GET
 	@Path("/authors")
 	@Produces(MediaType.APPLICATION_XML)
-	//// http://localhost:8080/injavawetrust.resteasy.tutorial/library-client-api/authors
+	// http://localhost:8080/injavawetrust.resteasy.tutorial/library-client-api/authors
 	public List<Author> getAuthors() {
 		Author author = new Author("1", "Turgut", "Uyar", "Turkey");
 		Author author2 = new Author("2", "Albert", "Camus", "French");
