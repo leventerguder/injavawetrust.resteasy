@@ -12,8 +12,8 @@ import _24.client.api.post.xml.model.Project;
 @Path("/project-client-api")
 public class ProjectResource {
 
-	@Path("/addProject")
 	@POST
+	@Path("/addProject")
 	@Consumes(MediaType.APPLICATION_XML)
 	public String addProject(Project project) {
 		System.out.println("ProjectResource#addProject");
@@ -21,8 +21,8 @@ public class ProjectResource {
 		return "addProject#succeed";
 	}
 
-	@Path("/addProjectBatch")
 	@POST
+	@Path("/addProjectBatch")
 	@Consumes(MediaType.APPLICATION_XML)
 	public String addProjectBatch(List<Project> projectList) {
 		System.out.println("ProjectResource#addProjectBatch");
