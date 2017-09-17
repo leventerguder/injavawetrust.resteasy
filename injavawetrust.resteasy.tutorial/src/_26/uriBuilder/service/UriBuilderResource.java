@@ -13,6 +13,7 @@ public class UriBuilderResource {
 
 	@GET
 	@Path("/test1")
+	// http://localhost:8080/injavawetrust.resteasy.tutorial/uriBuilder-path/test1
 	public String test1UriBuilder() {
 
 		UriBuilder builder = UriBuilder.fromPath("/customers/{id}");
@@ -27,6 +28,7 @@ public class UriBuilderResource {
 
 	@GET
 	@Path("/test2")
+	// http://localhost:8080/injavawetrust.resteasy.tutorial/uriBuilder-path/test2
 	public String test2UriBuilder() {
 
 		UriBuilder builder = UriBuilder.fromPath("/customers/{id}");
@@ -40,6 +42,7 @@ public class UriBuilderResource {
 
 	@GET
 	@Path("/test3")
+	// http://localhost:8080/injavawetrust.resteasy.tutorial/uriBuilder-path/test3
 	public String test3UriBuilder() {
 
 		UriBuilder builder = UriBuilder.fromPath("/customers/{id}");
@@ -55,6 +58,18 @@ public class UriBuilderResource {
 
 		URI uri = builder.buildFromMap(map);
 		return uri.toString();
+	}
+	
+	@GET
+	@Path("/test4")
+	// http://localhost:8080/injavawetrust.resteasy.tutorial/uriBuilder-path/test4
+	public String test4UriBuilder() {
+
+		UriBuilder builder = UriBuilder.fromResource(CustomerResource.class);
+		builder.path(CustomerResource.class,"getCustomer");
+		
+		return builder.build().toString();
+		
 	}
 
 }

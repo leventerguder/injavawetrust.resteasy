@@ -45,6 +45,7 @@ public class RegisterApplication extends Application {
 		singletons.add(new _24.client.api.post.xml.service.ProjectResource());
 		singletons.add(new _25.content.negotiation.service.CustomerResource());
 		singletons.add(new _26.uriBuilder.service.UriBuilderResource());
+		singletons.add(new _26.uriBuilder.service.CustomerResource());
 	}
 
 	@Override
