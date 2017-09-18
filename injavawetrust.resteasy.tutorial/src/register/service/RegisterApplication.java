@@ -47,6 +47,8 @@ public class RegisterApplication extends Application {
 		singletons.add(new _26.uriBuilder.service.UriBuilderResource());
 		singletons.add(new _26.uriBuilder.service.CustomerResource());
 		singletons.add(new _27.uriInfo.service.UriInfoResource());
+		singletons.add(new _28.link.service.LinkService());
+		singletons.add(new _28.link.service.CustomerResource());
 	}
 
 	@Override
