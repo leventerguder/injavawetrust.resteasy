@@ -17,7 +17,7 @@ import controller.RestMessageController;
 
 public class RegisterApplication extends Application{
 
-	   private Set<Object> singletons = new HashSet<Object>();
+	   private Set<Object> singletons = new HashSet<>();
 	   
 	   public RegisterApplication() {
 	      singletons.add(new RestMessageController());
