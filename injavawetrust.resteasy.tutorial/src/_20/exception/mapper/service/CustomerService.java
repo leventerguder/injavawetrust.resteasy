@@ -1,6 +1,6 @@
 package _20.exception.mapper.service;
 
-import _19.exception.model.Customer;
+import _20.exception.mapper.model.Customer;
 
 public class CustomerService {
 
