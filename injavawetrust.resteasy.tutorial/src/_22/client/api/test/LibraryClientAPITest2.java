@@ -1,5 +1,7 @@
 package _22.client.api.test;
 
+import java.util.Map;
+
 import javax.ws.rs.client.Client;
 import javax.ws.rs.client.ClientBuilder;
 import javax.ws.rs.client.Invocation;
@@ -26,6 +28,10 @@ public class LibraryClientAPITest2 {
 		Response response = invocationBuilder.get();
 		Book book = response.readEntity(Book.class);
 
+		String jsonResponse = invocationBuilder.get(String.class);
+		@SuppressWarnings("unchecked")
+		Map<String, String> mappedResponse = invocationBuilder.get(Map.class);
+
 		// way2
 		Response response2 = invocationBuilder.get();
 		Book book2 = response2.readEntity(new GenericType<Book>() {
@@ -34,6 +40,8 @@ public class LibraryClientAPITest2 {
 		System.out.println("### way1 ###");
 		System.out.println(response.getStatus());
 		System.out.println(book);
+		System.out.println(jsonResponse);
+		System.out.println(mappedResponse);
 		System.out.println();
 
 		System.out.println("### way2 ###");

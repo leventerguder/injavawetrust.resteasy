@@ -21,19 +21,35 @@ public class MessageClientAPITest2 {
 
 		// way-1
 		Response response = builder.get();
-		
+
+		response.bufferEntity();
+
 		@SuppressWarnings("unchecked")
 		List<String> resultList1 = response.readEntity(List.class);
 
+		// If we didn’t buffer the entity, the second readEntity() call would result in
+		// an IllegalStateException.
+		String resultJSON = response.readEntity(String.class);
+
 		// way-2
-		List<String> resultList2 = builder.get(new GenericType<List<String>>() {});
+		// Invoke HTTP GET method for the current request synchronously.
+		List<String> resultList2 = builder.get(new GenericType<List<String>>() {
+		});
+		
+		@SuppressWarnings("unchecked")
+		List<String> resultList3 = builder.get(List.class);
 
 		System.out.println("### way1 ###");
 		System.out.println(resultList1);
+		System.out.println(resultJSON);
 
 		System.out.println("### way2 ###");
 		System.out.println(resultList2);
+		
+		System.out.println("### way3 ###");
+		System.out.println(resultList3);
 
+		response.close();
 		client.close();
 	}
 }
