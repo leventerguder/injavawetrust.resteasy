@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- add rolename and username to tomcat'2 tomcat-user.xml file -->
+	<role rolename="EMPLOYEE" />
+	<user username="levent" password="123456" roles="EMPLOYEE" />
+</tomcat-users>
