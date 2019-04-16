@@ -1,7 +1,5 @@
 package resource;
 
-
-
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
@@ -16,7 +14,7 @@ public class EmployeeResource {
 
 	@GET
 	@Path("{id}")
-	public String getUser(@PathParam("id") String id) {
+	public String getEmployee(@PathParam("id") String id) {
 		return "dummy employee with id: " + id;
 	}
 }
