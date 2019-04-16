@@ -12,11 +12,37 @@
 		<auth-constraint>
 			<role-name>EMPLOYEE</role-name>
 		</auth-constraint>
+
+		<!-- By default, the servlet specification will not require access over 
+			HTTPS to any user constraints you declare in your web.xml file. If you want 
+			to enforce HTTPS access for these constraints, you can specify a <user-data-constraint> 
+			within your <security- constraint> definition -->
+			
+		<!-- 
+		<user-data-constraint> 
+			<transport-guarantee>CONFIDENTIAL</transport-guarantee> 
+		</user-data-constraint> -->
+
 	</security-constraint>
-	
+
 	<login-config>
 		<auth-method>BASIC</auth-method>
 		<realm-name>default</realm-name>
 	</login-config>
-	
+
+	<!-- To enable authentication, you need to modify the WEB-INF/web.xml deployment 
+		descriptor of the WAR file your JAX-RS application is deployed in. You enable 
+		authorization through XML or by applying annotations to your JAX-RS resource 
+		classes. -->
+
+	<!-- The <login-config> element defines how we want our HTTP requests to 
+		be authenticated for our entire deployment. The <auth-method> sub element 
+		can be BASIC, DIGEST, or CLIENT_CERT. These values correspond to Basic, Digest, 
+		and Client Certificate Authentication, respectively. -->
+
+
+	<!-- To enforce authentication, you must specify a URL pattern you want 
+		to secure. -->
+
+	<!-- If we leave out the <http-method> element, all HTTP methods are secured. -->
 </web-app>
