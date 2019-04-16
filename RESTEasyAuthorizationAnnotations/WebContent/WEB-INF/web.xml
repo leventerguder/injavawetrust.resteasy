@@ -6,6 +6,9 @@
 	<display-name>RESTEasyAuthorizationAnnotations</display-name>
 
 
+	<!-- By default though, RESTEasy does not recognize these annotations. You 
+		have to configure RESTEasy to turn on role-based security by setting a context 
+		parameter. -->
 	<context-param>
 		<param-name>resteasy.role.based.security</param-name>
 		<param-value>true</param-value>
