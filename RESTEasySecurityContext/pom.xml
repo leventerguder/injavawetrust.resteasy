@@ -50,7 +50,6 @@
 			<version>${resteasy.version}</version>
 		</dependency>
 
-
 	</dependencies>
 
 </project>
